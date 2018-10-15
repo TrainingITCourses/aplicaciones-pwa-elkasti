@@ -1,0 +1,13 @@
+<h2>Lanzamientos</h2>
+
+<div *ngIf="!(cargado | async)">Cargando ...</div>
+<div>
+  <div>Total {{(launches | async)?.length}}</div>
+  <div>
+    <ul>
+      <li *ngFor="let launch of launches | async">
+        {{launch.name}}
+      </li>
+    </ul>
+  </div>
+</div>
